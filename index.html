@@ -7,8 +7,35 @@
 
 
 
+
+<script>
+
+function dis (val)
+{
+
+document.getElementBy("RESULTS").value+=value;
+}
+
+
+function clear()
+
+{ 
+   document.getElementByID("RESULTS").value="";
+
+
+
+}
+ function calculate()
+{
+let x=document.getElementByID("RESULTS").value;
+let y =eval(x);
+document.getElementByID("RESULTS").value=y;
+return y
+}
+
+</script>
 </head>
-<script></script>
+<body>
 <table>
    
     
@@ -17,13 +44,13 @@
     <tr>
       
       
-      <td colspan ="3"><input type="text" id="results"/></td>
-      <td class="bg-green text-white"input type="button" value="C" onclick="clear" /></td>
+      <td colspan ="3"><input type="text" id="RESULTS"/></td>
+      <td> <input type="button" value="C" onclick ="clearScreen ()"/> </td>
     </tr>
 
       <tr class="bg-green text-white"></tr>
-      <td><input type="button" value="1"onclick="dis('1')" /></td>
-      <td><input type="button" value="2"onclick="dis('2')" /></td>
+      <td><input type="button" value="1" onclick="dis('1')" /></td>
+      <td><input type="button" value="2" onclick="dis('2')" /></td>
       <td><input type="button" value="3" onclick="dis('3')"/></td>
       <td><input type="button" value="/" onclick="dis('1')"/></td>
     </tr>
@@ -47,8 +74,7 @@
         <td><input type="button" value="0" onclick="dis('0')"/></td>
         <td><input type="button" value="." onclick="dis('.')"/> </td>
         <td><input type="button" value="+" onclick="dis('+')"/></td>
-        <td><input type="button" value="=" onclick="dis('=')"/></td>
-      </tr>onclick="dis('1')"
+        <td><input type="button" value="=" onclick ="solve() "/></td>
   
   </table>
   
